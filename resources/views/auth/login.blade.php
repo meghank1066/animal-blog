@@ -1,8 +1,8 @@
 @extends('layouts.app')
-
+<div class="background-image"/>
 @section('content')
-<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
-    <div class="flex">
+
+<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10 ">
         <div class="w-full">
             <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
 
@@ -81,4 +81,5 @@
         </div>
     </div>
 </main>
+</div>
 @endsection

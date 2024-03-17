@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>AnimalHub</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -17,28 +17,43 @@
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
     <div id="app">
-        <header class="bg-gray-800 py-6">
+
+        {{-- <div class="music-bar bg-black text-white py-2 px-6 flex justify-between items-center">
+            <div class="music-player">
+                Music Player
+            </div>
+            <div class="music-info">
+                Now Playing: Song Name
+            </div>
+        </div> --}}
+
+
+
+        <header class="navbar py-6">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
-                    <a href="{{ url('/') }}" class="text-lg font-semibold text-gray-100 no-underline">
-                        {{ config('app.name', 'Laravel') }}
+                    <a href="{{ url('/') }}" class="navapp">
+                      <img src="../../images/animallogo.png"  style="width: 300px; height: auto" alt="Animalhub" />
                     </a>
                 </div>
-                <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
-                    <a class="no-underline hover:underline" href="/">Home</a>
-                    <a class="no-underline hover:underline" href="/blog">Blog</a>
-                    @guest
-                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('Login') }}</a>
-                        @if (Route::has('register'))
-                            <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('Register') }}</a>
-                        @endif
-                    @else
-                        <span>{{ Auth::user()->name }}</span>
+                <nav class="navbarlist font">
+                    <a class="no-underline hover:underline" href="/">home
+                        <img src="../../images/dogpaw.png" class="inline-block h-6 w-7">
+                    </a>
+                        <a class="no-underline hover:underline  ml-1.5" href="/blog">blog</a>
+                        <a class="no-underline hover:underline ml-1.5" href="/sharehub">sharehub</a>
 
-                        <a href="{{ route('logout') }}"
-                           class="no-underline hover:underline"
-                           onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                    @guest
+                        <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('login') }}</a>
+                        @if (Route::has('register'))
+                            <a class="no-underline hover:underline" href="{{ route('register') }}">{{ __('register') }}</a>
+                        @endif
+                        @else
+                        <span class="username">{{ Auth::user()->name }}</span>
+                        <a href="{{ route('logout') }}" class="no-underline hover:underline"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                           {{ __('Logout') }}
+                        </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                             {{ csrf_field() }}
                         </form>

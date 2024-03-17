@@ -1,15 +1,152 @@
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
+@import "app.css";
+
+
+@font-face {
+    font-family: 'Billo';
+    src: url('../../public/css/billo.regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  /* color palette */
+
+:root {
+  --color-pale-orange: #F6C49C;
+  --color-dark-brown: #a27754;
+  --color-pink: #ff9090;
+  --color-cool-orange: #EFB07D;
+  --color-grey: #737373;
+  --color-red: #EF5454;
+}
+  
+  
+
 
 .background-image 
 {
-    background-image: url('https://cdn.pixabay.com/photo/2017/07/31/23/45/pen-2562078_960_720.jpg');
+    background-image: url(/images/animalbg.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 600px;
+    height: 599px;
 }
+
+
+.py-6 {
+    background-color: #ff9090;
+}
+
+.py-6 ul {
+
+    color: white;
+}
+
+.custom-background {
+    background-color: #ff9090;
+  }
+
+
+.navapp img {
+    width: 150px; 
+    height: auto;
+  }
+
+  /* navbar.scss */
+
+ 
+
+.navbarlist { 
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: 10px;
+        font-family: 'Billo', sans-serif;
+        position: relative;
+        /* border: 5px solid transparent; */
+        border-radius: 10px;
+
+        
+    }
+    
+
+    a:hover {
+        text-decoration: none;
+        /* background-color: #ffac90; */
+        color: #a27754;
+        /* border: 3px solid white; */
+    }
+    
+    .username {
+        color: white;
+        text-decoration: none;
+        font-size: 2em;
+        font-family: 'Billo', sans-serif;
+        position: relative;
+        /* border: 5px solid transparent; */
+        border-radius: 10px;
+    }
+
+    .username:hover {
+        text-decoration: none;
+        /* background-color: ; */
+        color: #a27754;
+        border: 3px solid white;
+        font-size: 2em;
+        border-radius: 50px;
+    }
+
+}
+
+.bgspace {
+    margin: auto;
+    padding: 10%;
+}
+
+
+.font {
+    font-family: 'Billo', sans-serif;
+}
+    /* position: relative;
+    display: inline-block;
+    padding: 8px 12px; /* Adjust padding to make space for the border */
+    /* border: 2px solid white;
+    border-radius: 4px;
+} */ 
+
+
+
+
+.text-gray-100 img {
+    margin-top: 4%;
+    margin-left: 35%;
+    height: 377px;
+     width: 400px;
+     padding: 0;
+
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .navbarlist a {
+        font-size: 2em;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .navbarlist a {
+        font-size: 1em;
+        padding: 5px;
+    }
+}
+
+
