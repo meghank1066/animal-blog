@@ -41,7 +41,7 @@
                         <img src="../../images/dogpaw.png" class="inline-block h-6 w-7">
                     </a>
                         <a class="no-underline hover:underline  ml-1.5" href="/blog">blog</a>
-                        <a class="no-underline hover:underline ml-1.5" href="/sharehub">sharehub</a>
+                        <a class="no-underline hover:underline ml-1.5" href="/sharehub">gallery</a>
 
                     @guest
                         <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('login') }}</a>
