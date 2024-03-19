@@ -41,7 +41,7 @@
         </div>
     </div>  --}}
 
-     <div class="text-center p-15 bg-black text-white">
+     {{-- <div class="text-center p-15 bg-black text-white">
         <h2 class="text-2xl pb-5 text-l"> 
             I'm an expert in...
         </h2>
@@ -58,7 +58,7 @@
         <span class="font-extrabold block text-4xl py-1">
             Backend Development
         </span>
-    </div>
+    </div> --}}
 
     <div class="text-center py-15">
         <span class="uppercase text-s text-gray-400">
@@ -74,6 +74,8 @@
         </p>
         
     </div>
+
+    
 
     {{-- <div class="sm:grid grid-cols-2 w-4/5 m-auto">
         <div class="flex bg-yellow-700 text-gray-100 pt-10">
@@ -95,26 +97,6 @@
         </div> --}}
 
 
-        <section class="info">
-            <img src="https://codetheweb.blog/assets/img/icon2.png">
-            <h1>Learn HTML &mdash; <a href="https://codetheweb.blog/" target="_blank">Code The Web</a></h1>
-        </section>
-        <section class="cards-wrapper">
-            <!-- Card 1 -->
-            <div class="card-grid-space">
-                <!-- Card 1 HTML -->
-            </div>
-    
-            <!-- Card 2 -->
-            <div class="card-grid-space">
-                <!-- Card 2 HTML -->
-            </div>
-    
-            <!-- Card 3 -->
-            <div class="card-grid-space">
-                <!-- Card 3 HTML -->
-            </div>
-        </section>
 
 
 
