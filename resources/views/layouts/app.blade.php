@@ -13,6 +13,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     
     <!-- Styles -->
+    
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
@@ -40,8 +41,13 @@
                     <a class="no-underline hover:underline" href="/">home
                         <img src="../../images/dogpaw.png" class="inline-block h-6 w-7">
                     </a>
+                    
+
                         <a class="no-underline hover:underline  ml-1.5" href="/blog">blog</a>
                         <a class="no-underline hover:underline ml-1.5" href="/sharehub">gallery</a>
+                        <a class="no-underline hover:underline ml-1.5" href="/quiz">quiz</a>
+
+
 
                     @guest
                         <a class="no-underline hover:underline" href="{{ route('login') }}">{{ __('login') }}</a>

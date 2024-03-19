@@ -1,7 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "app.css";
+/* @import "app.css"; */
 
 
 @font-face {
@@ -11,6 +11,7 @@
     font-style: normal;
   }
 
+  
 
   /* color palette */
 
@@ -48,6 +49,7 @@
 
 .custom-background {
     background-color: #ff9090;
+    
   }
 
 
@@ -61,10 +63,11 @@
  
 
 .navbarlist { 
+    
     a {
         color: white;
         text-decoration: none;
-        font-size: 1.5em;
+        font-size: 1.7em;
         padding: 10px;
         font-family: 'Billo', sans-serif;
         position: relative;
@@ -90,6 +93,7 @@
         position: relative;
         /* border: 5px solid transparent; */
         border-radius: 10px;
+        padding: 10px;
     }
 
     .username:hover {
@@ -97,8 +101,9 @@
         /* background-color: ; */
         color: #a27754;
         border: 3px solid white;
-        font-size: 2em;
+        font-size: 1.8em;
         border-radius: 50px;
+        padding: 10px;
     }
 
 }
@@ -150,3 +155,60 @@
 }
 
 
+/* quiz */
+
+
+
+.max-w-md {
+    background-image: url(/images/animalbg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* width styling */
+
+
+
+.quiz-section {
+    width: 500px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the quiz section horizontally */
+}
+
+
+
+
+.button-radio {
+    appearance: none;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-radio:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+.buttonsubmit {
+    appearance: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttonsubmit:hover {
+    background-color: white;
+    border: 2px solid #a27754;
+    color: #a27754;
+}

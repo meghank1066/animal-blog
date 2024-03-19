@@ -4,7 +4,12 @@ module.exports = {
     './resources/css/**/*.css',
   ],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        'custom-pink': '#EF5454',
+        'cool-toned-pink': '#FF9090'
+      },
+    },
   },
   variants: {},
   plugins: [
