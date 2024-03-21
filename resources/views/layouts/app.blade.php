@@ -13,11 +13,13 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     
     <!-- Styles -->
+
+
     
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none font-sans">
-    <div id="app">
+<body class="bg-gray-100 h-screen antialiased leading-none font-sans custom-cursor">
+    <div id="app custom-cursor">
 
         {{-- <div class="music-bar bg-black text-white py-2 px-6 flex justify-between items-center">
             <div class="music-player">
@@ -30,7 +32,7 @@
 
 
 
-        <header class="navbar py-6">
+        <header class="navbar py-6 custom-cursor">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
                     <a href="{{ url('/') }}" class="navapp">

@@ -39222,26 +39222,6 @@ video {
   border-bottom: 2px solid white;
 }
 
-/* 
-
-@media (max-width: 540px) {
-    .navbarlist a {
-        font-size: 2em;
-    }
-
-    .navapp img {
-        width: 100px; 
-    }
-}
-
-
-@media (max-width: 640px) {
-    .navbarlist a {
-        font-size: 0.5em;
-        padding: 5px;
-    }
-} */
-
 @media (max-width: 540px) {
     .navbarlist a {
       font-size: 0.8em;
@@ -39274,7 +39254,7 @@ video {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust width as needed */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -39284,7 +39264,7 @@ video {
 
 .image-container {
   width: 100%;
-  height: 300px; /* Adjust height as needed */
+  height: 300px;
   position: relative;
 }
 
@@ -39302,138 +39282,143 @@ video {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 5px;
-  display: flex; /* Add flex display */
-  justify-content: space-between; /* Add this to evenly space the buttons */
+  display: flex;
 }
 
-.delete-button {
-  background-color: #EF5454; /* Red color */
+/* Add flex display 
+    justify-content: space-between; 
 }
+
+
+.delete-button {
+    background-color: #EF5454; 
+}
+
 
 /* Styles for upload form */
 
-#image-upload {
-  display: none;
-}
+.button-container #image-upload {
+    display: none;
+  }
 
-.alert {
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 5px;
-}
+.button-container .alert {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-.alert-danger {
-  background-color: #FF9090; /* Light red background */
-}
+.button-container .alert-danger {
+    background-color: #FF9090;
+  }
 
-.alert-success {
-  background-color: #FF9090; /* Light green background */
-}
+.button-container .alert-success {
+    background-color: #FF9090;
+  }
 
-.action-buttons {
-  display: flex;
-  align-items: center; /* Align buttons vertically in the center */
-}
+.button-container .action-buttons {
+    display: flex;
+    align-items: center;
+  }
 
-.button-container button {
-  margin: 5px;
-}
+.button-container .button-container button {
+    margin: 5px;
+  }
 
-.input-text {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
+.button-container .input-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 
 /* Styles for upload button */
 
-.upload-button {
-  background-color: #FF9090;
-  color: #ffffff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+.button-container .upload-button {
+    background-color: #FF9090;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 
-.upload-button:hover {
-  background-color: #e96565;
-}
+.button-container .upload-button:hover {
+    background-color: #e96565;
+  }
 
-.description-container {
-  flex: 1; /* Allow description container to take up remaining space */
-}
+.button-container .description-container {
+    flex: 1;
+  }
 
-.description {
-  margin: 0;
-}
+.button-container .description {
+    margin: 0;
+  }
 
-.custom-img {
-  background-image: url(/images/gallery.png);
-  background-size: cover; /* or 'contain' depending on your preference */
-  background-repeat: no-repeat;
-  background-position: center;
-  /* Add any other styling you need */
-}
+.button-container .custom-img {
+    background-image: url(/images/gallery.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Add any other styling you need */
+  }
 
-.gallery-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-  z-index: 9999; /* Ensure it appears above other content */
-}
+.button-container .gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+  }
 
-.gallery-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Additional styling for gallery content */
-}
+.button-container .gallery-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Additional styling for gallery content */
+  }
 
-.app {
-  background-color: #EFB07D;
-}
+.button-container .app {
+    background-color: #EFB07D;
+  }
 
-.bg-light-pink-baby {
-  background-color: #FFD5D4;
-}
+.button-container .bg-light-pink-baby {
+    background-color: #FFD5D4;
+  }
 
 @keyframes slide {
-  0% {
-    transform: translateX(0);
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
-  100% {
-    transform: translateX(-100%);
+.button-container .animate-slide {
+    animation: slide 10s infinite linear;
   }
-}
 
-.animate-slide {
-  animation: slide 10s infinite linear;
-}
+.button-container .animate-slide:hover {
+    animation-play-state: paused;
+  }
 
-.animate-slide:hover {
-  animation-play-state: paused;
-}
+.button-container .bg-pale-orange {
+    background-color: #FEEBC8;
+  }
 
-.bg-pale-orange {
-  background-color: #FEEBC8; /* Adjust the color as needed */
-}
+.button-container .grid gap-4 {
+    margin: -1rem;
+  }
 
-.grid gap-4 {
-  margin: -1rem; /* Remove the gap between the cards */
-}
-
-.grid > div {
-  padding: 1rem; /* Add padding to each card */
-}
+.button-container .grid > div {
+    padding: 1rem;
+  }
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -192214,4 +192199,6 @@ video {
     animation: bounce 1s infinite;
   }
 }
+
+
 
