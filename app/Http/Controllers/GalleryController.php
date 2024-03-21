@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -20,28 +21,49 @@ class GalleryController extends Controller
         Gallery::create([
             'image_name' => $imageName,
             'image_description' => $request->description,
+            'comments' => [] // Initialize comments as an empty array
         ]);
 
-        return redirect()->back()->with('success', 'Image uploaded successfully.');
+        return redirect()->back()->with('success');
     }
 
- 
+  
 
-    public function comment(Request $request, Gallery $image)
-{
+    public function index()
+    {
+        $images = Gallery::all();
+        return view('layouts.feature.sharehub')->with('images', $images);
+    }
+
+
+    public function deleteImage(Gallery $image)
+    {
+        $image->delete();
     
-    $image->comments()->create(['content' => $request->user_comment]);
+        return redirect()->back()->with('success', 'Image and associated comments deleted successfully.');
+    }
 
-    return redirect()->back()->with('success', 'Comment submitted successfully.');
-}
-
-public function index()
-{
-    $images = Gallery::all();
-    return view('layouts.feature.sharehub')->with('images', $images);
-}
-
-
-}
-
-
+    public function updateDescription(Request $request, Gallery $image)
+    {
+        // Check if the user is authenticated
+        if (!auth()->check()) {
+            return redirect()->back()->with('error', 'You must be logged in to update the description.');
+        }
+    
+        // Check if the authenticated user owns the image (assuming you have a user_id column in your Gallery model)
+        if (auth()->user()->id !== $image->user_id) {
+            return redirect()->back()->with('error', 'You are not authorized to update this image description.');
+        }
+    
+        // Validate the request data
+        $request->validate([
+            'description' => 'nullable|string',
+        ]);
+    
+        // Update the image description
+        $image->update(['image_description' => $request->description]);
+    
+        // Redirect back with success message
+        return redirect()->back()->with('success', 'Image description updated successfully.');
+    }
+}    

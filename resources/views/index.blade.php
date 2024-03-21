@@ -30,7 +30,7 @@
     
             {{-- Content container --}}
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
-                <div class="bg-cool-toned-pink rounded-lg p-8 text-white text-center relative z-10">
+                <div class="bg-dark-brown rounded-lg p-8 text-white text-center relative z-10 rounded-image ">
                     <h2 class="text-4xl font-bold mb-6"><img src="../../images/animalhub.png"  style="width: 300px; height: auto; padding: 10px;" alt="Animalhub" />
                     <p class="text-xl mb-5 p-10">Discover the wonderful world of animals with us!</p>
                     <a href="/quiz" class="bg-#FF9090 text-white font-semibold py-2 px-4 p-10 border border-white rounded hover:bg-custom-pink transition duration-300">Discover Now</a> </div>
@@ -42,18 +42,18 @@
 
 
 
-<div class="sm:grid grid-cols-2 gap-20 mx-auto p-10" style="background-color: #EFB07D; border-top: 1px solid white; border-bottom: 1px solid white;">
+<div class="sm:grid grid-cols-2 gap-8 mx-auto p-6 bg-cool-orange rounded-web">
     <div class="flex justify-center items-center">
-        <img src="../../images/cat.jpg" width="550" height="600" alt="Dogs" class="mt-4 sm:mt-0" style="border: 1px solid white;">
+        <img src="../../images/bunny.png" alt="bunny" class="mt-4 sm:mt-0 rounded-lg border border-white rounded-image">
     </div>
     <div class="m-auto sm:m-auto text-left w-4/5 block">
         <h2 class="text-4xl font-bold text-white">
-            Help Support Animals in Need!
+            Help Support Animals in Need
         </h2>
         <p class="py-4 text-white text-lg">
             Join us in making a difference for animals everywhere by donating to an organization you can trust.
         </p>
-        <p class="font-extrabold text-white text-lg pb-6">
+        <p class=" text-white text-lg pb-6">
             Every donation goes towards providing shelter, medical care, and love to animals waiting for their forever homes.
         </p>
         <a href="https://www.dogstrust.org.uk/donate/" target="_blank" rel="noopener noreferrer" class="bg-#FF9090 text-white font-semibold py-2 px-4 p-20 border border-white rounded hover:bg-custom-pink transition duration-300">

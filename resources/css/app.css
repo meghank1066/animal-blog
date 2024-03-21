@@ -48,13 +48,14 @@
 }
 
 .custom-background {
-    background-color: #ff9090;
+    background-color: #F6C49C;
     
   }
 
 
 .navapp img {
-    width: 150px; 
+    width: 150px;
+    padding-left: 3%; 
     height: auto;
   }
 
@@ -67,12 +68,11 @@
     a {
         color: white;
         text-decoration: none;
-        font-size: 1.7em;
         padding: 10px;
         font-family: 'Billo', sans-serif;
         position: relative;
-        /* border: 5px solid transparent; */
         border-radius: 10px;
+        font-size: 1.7em;
 
         
     }
@@ -82,13 +82,14 @@
         text-decoration: none;
         /* background-color: #ffac90; */
         color: #a27754;
+        font-size: 1.7em;
         /* border: 3px solid white; */
     }
     
     .username {
         color: white;
         text-decoration: none;
-        font-size: 2em;
+        font-size: 1.8em;
         font-family: 'Billo', sans-serif;
         position: relative;
         /* border: 5px solid transparent; */
@@ -101,7 +102,7 @@
         /* background-color: ; */
         color: #a27754;
         border: 3px solid white;
-        font-size: 1.8em;
+        font-size: 1.7em;
         border-radius: 50px;
         padding: 10px;
     }
@@ -137,22 +138,6 @@
 }
 
 
-
-
-
-@media (min-width: 768px) {
-    .navbarlist a {
-        font-size: 2em;
-    }
-}
-
-
-@media (max-width: 640px) {
-    .navbarlist a {
-        font-size: 1em;
-        padding: 5px;
-    }
-}
 
 
 /* quiz */
@@ -211,4 +196,202 @@
     background-color: white;
     border: 2px solid #a27754;
     color: #a27754;
+}
+
+.py-6 ul {
+    font-size: 14px; 
+}
+
+.rounded-image {
+    border: 2px solid white;
+}
+
+
+.rounded-web {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+
+
+/* 
+
+@media (max-width: 540px) {
+    .navbarlist a {
+        font-size: 2em;
+    }
+
+    .navapp img {
+        width: 100px; 
+    }
+}
+
+
+@media (max-width: 640px) {
+    .navbarlist a {
+        font-size: 0.5em;
+        padding: 5px;
+    }
+} */
+
+
+ 
+@media (max-width: 540px) {
+    .navbarlist { 
+    
+        a {
+        font-size: 0.8em; 
+    }
+
+    .username  {
+        font-size: 0.8em; 
+    }
+    .username:hover  {
+        font-size: 0.8em; 
+    }
+}
+
+    .navapp img {
+        width: 80px;
+    }
+
+    .text-gray-100 img {
+        margin-left: 10%; 
+    }
+
+    .quiz-section {
+        width: 95%; 
+    }
+}
+
+
+.custom-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust width as needed */
+    gap: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.button-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    display: flex; /* Add flex display */
+    justify-content: space-between; /* Add this to evenly space the buttons */
+}
+
+
+.delete-button {
+    background-color: #EF5454; /* Red color */
+}
+
+
+/* Styles for upload form */
+#image-upload {
+    display: none;
+}
+
+.alert {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert-danger {
+    background-color: #FF9090; /* Light red background */
+}
+
+.alert-success {
+    background-color: #FF9090; /* Light green background */
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center; /* Align buttons vertically in the center */
+}
+
+.button-container button {
+    margin: 5px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styles for upload button */
+.upload-button {
+    background-color: #FF9090;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #e96565;
+}
+
+.description-container {
+    flex: 1; /* Allow description container to take up remaining space */
+}
+
+.description {
+    margin: 0;
+}
+
+
+.custom-img {
+    background-image: url(/images/gallery.png);
+    background-size: cover; /* or 'contain' depending on your preference */
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Add any other styling you need */
+}
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it appears above other content */
+}
+
+.gallery-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Additional styling for gallery content */
 }

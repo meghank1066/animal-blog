@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="custom-img">
 <div class="w-4/5 m-auto text-center">
     <div class="py-15 border-b border-gray-200">
         <h1 class="text-6xl">
@@ -41,8 +42,8 @@
                 By <span class="font-bold italic text-gray-800">{{ $post->user->name }}</span>, Created on {{ date('jS M Y', strtotime($post->updated_at)) }}
             </span>
 
-            <p class="text-xl text-gray-700 pt-8 pb-4 leading-8 font-light">
-                {{ \Illuminate\Support\Str::limit($post->description, 150) }}
+            <p class="text-xl text-gray-700 pt-8 pb-10 leading-8 font-light">
+                {{ substr($post->description, 0, strlen($post->description) / 10) }}
             </p>
 
             <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
@@ -76,6 +77,7 @@
             @endif
         </div>
     </div>    
+</div>
 @endforeach
 
 @endsection

@@ -36,7 +36,9 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 
 Route::get('/sharehub', [GalleryController::class, 'index'])->name('sharehub');
 Route::post('/upload', [GalleryController::class, 'upload'])->name('upload');
-Route::post('/comment', [GalleryController::class, 'comment'])->name('comment');
+Route::delete('/delete/{image}', [GalleryController::class, 'deleteImage'])->name('delete');
+Route::post('/update-description/{image}', [GalleryController::class, 'updateDescription'])->name('updateDescription');
+
 
 Route::get('/about', function () {
     return view('layouts.feature.about');
@@ -47,3 +49,6 @@ Route::get('/about', function () {
 
 Route::get('/quiz', [PetMatchController::class, 'showQuizForm']);
 Route::post('/quiz', [PetMatchController::class, 'match'])->name('quiz.match');
+
+
+
