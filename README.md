@@ -1,5 +1,12 @@
 ## Laravel 8 Complete Blog
 
+![Screenshot 2024-03-21 121814](https://github.com/meghank1066/animal-blog/assets/119862594/876f05a9-cba6-4193-b294-6460915555b5)
+
+![quiz](https://github.com/meghank1066/animal-blog/assets/119862594/8a3c8bcd-f457-4626-9df9-658850e6764f)
+
+
+
+
 This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
 
 •	Author: Code With Dary <br>
@@ -36,8 +43,8 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=laravelblog
-DB_USERNAME={USERNAME}
-DB_PASSWORD={PASSWORD}
+DB_USERNAME=meghan
+DB_PASSWORD=meg
 ```
 
 Migrate the tables

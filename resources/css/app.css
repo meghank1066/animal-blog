@@ -1,15 +1,419 @@
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
+/* @import "app.css"; */
+
+
+@font-face {
+    font-family: 'Billo';
+    src: url('../../public/css/billo.regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  
+
+  /* color palette */
+
+:root {
+  --color-pale-orange: #F6C49C;
+  --color-dark-brown: #a27754;
+  --color-pink: #ff9090;
+  --color-cool-orange: #EFB07D;
+  --color-grey: #737373;
+  --color-red: #EF5454;
+}
+  
+  
+
 
 .background-image 
 {
-    background-image: url('https://cdn.pixabay.com/photo/2017/07/31/23/45/pen-2562078_960_720.jpg');
+    background-image: url(/images/animalbg.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 600px;
+    height: 599px;
 }
+
+
+.py-6 {
+    background-color: #ff9090;
+}
+
+.py-6 ul {
+
+    color: white;
+}
+
+.custom-background {
+    background-color: #ff9090;
+    
+  }
+
+
+.navapp img {
+    width: 150px;
+    padding-left: 3%; 
+    height: auto;
+  }
+
+  /* navbar.scss */
+
+ 
+
+.navbarlist { 
+    
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-family: 'Billo', sans-serif;
+        position: relative;
+        border-radius: 10px;
+        font-size: 1.7em;
+
+        
+    }
+    
+
+    a:hover {
+        text-decoration: none;
+        /* background-color: #ffac90; */
+        color: #a27754;
+        font-size: 1.7em;
+        /* border: 3px solid white; */
+    }
+    
+    .username {
+        color: white;
+        text-decoration: none;
+        font-size: 1.8em;
+        font-family: 'Billo', sans-serif;
+        position: relative;
+        /* border: 5px solid transparent; */
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .username:hover {
+        text-decoration: none;
+        /* background-color: ; */
+        color: #a27754;
+        border: 3px solid white;
+        font-size: 1.7em;
+        border-radius: 50px;
+        padding: 10px;
+    }
+
+}
+
+.bgspace {
+    margin: auto;
+    padding: 10%;
+}
+
+
+.font {
+    font-family: 'Billo', sans-serif;
+}
+    /* position: relative;
+    display: inline-block;
+    padding: 8px 12px; /* Adjust padding to make space for the border */
+    /* border: 2px solid white;
+    border-radius: 4px;
+} */ 
+
+
+
+
+.text-gray-100 img {
+    margin-top: 4%;
+    margin-left: 35%;
+    height: 377px;
+     width: 400px;
+     padding: 0;
+
+}
+
+
+
+
+/* quiz */
+
+
+
+.max-w-md {
+    background-image: url(/images/animalbg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/* width styling */
+
+
+
+.quiz-section {
+    width: 500px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the quiz section horizontally */
+}
+
+
+
+
+.button-radio {
+    appearance: none;
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-radio:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+.buttonsubmit {
+    appearance: none;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.buttonsubmit:hover {
+    background-color: white;
+    border: 2px solid #a27754;
+    color: #a27754;
+}
+
+.py-6 ul {
+    font-size: 14px; 
+}
+
+.rounded-image {
+    border: 2px solid white;
+}
+
+
+.rounded-web {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+
+
+
+@media (max-width: 540px) {
+    .navbarlist { 
+    
+        a {
+        font-size: 0.8em; 
+    }
+
+    .username  {
+        font-size: 0.8em; 
+    }
+    .username:hover  {
+        font-size: 0.8em; 
+    }
+}
+
+    .navapp img {
+        width: 80px;
+    }
+
+    .text-gray-100 img {
+        margin-left: 10%; 
+    }
+
+    .quiz-section {
+        width: 95%; 
+    }
+}
+
+
+.custom-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    height: 300px; 
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.button-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    display: flex; /* Add flex display 
+    justify-content: space-between; 
+}
+
+
+.delete-button {
+    background-color: #EF5454; 
+}
+
+
+/* Styles for upload form */
+#image-upload {
+    display: none;
+}
+
+.alert {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alert-danger {
+    background-color: #FF9090; 
+}
+
+.alert-success {
+    background-color: #FF9090; 
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.button-container button {
+    margin: 5px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styles for upload button */
+.upload-button {
+    background-color: #FF9090;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-button:hover {
+    background-color: #e96565;
+}
+
+.description-container {
+    flex: 1; 
+}
+
+.description {
+    margin: 0;
+}
+
+/* 
+.custom-image {
+    background-image: url('/images/gallery.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+} */
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 9999;
+}
+
+.gallery-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Additional styling for gallery content */
+}
+
+.app {
+    background-color: #EFB07D;
+}
+
+.bg-light-pink-baby {
+    background-color: #FFD5D4;
+}
+
+
+/* @keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+} */
+
+/* .animate-slide {
+    animation: slide 10s infinite linear;
+}
+
+.animate-slide:hover {
+    animation-play-state: paused;
+} */
+
+.bg-pale-orange {
+    background-color: #FEEBC8;
+}
+
+.grid gap-4 {
+    margin: -1rem;
+}
+
+.grid > div {
+    padding: 1rem; 
+}
+}
+
+
+/* @media (max-width: 1024px) {
+    .background-image {
+
+
