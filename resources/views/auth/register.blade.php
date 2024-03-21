@@ -1,21 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="sm:container sm:mx-auto sm:max-w-lg sm:mt-10">
-    <div class="flex">
+<div class="background-image">
+    <main class="bg-cover bg-center pb-10 sm:container sm:mx-auto sm:max-w-lg p-10"> <!-- Removed unnecessary margin classes -->
         <div class="w-full">
-            <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
-
-                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
+            <section class="flex flex-col break-words bg-cool-toned-orange sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
+                <header class="font-semibold bg-cool-toned-pink text-white py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
                     {{ __('Register') }}
                 </header>
 
-                <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8" method="POST"
+                <form class="w-full px-6 space-y-6 sm:px-10 sm:space-y-8 pb-5" method="POST"
                     action="{{ route('register') }}">
                     @csrf
 
                     <div class="flex flex-wrap">
-                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="name" class="block text-white-700 text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Name') }}:
                         </label>
 
@@ -30,7 +29,7 @@
                     </div>
 
                     <div class="flex flex-wrap">
-                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="email" class="block text-white-700 text-sm font-bold mb-2 sm:mb-4">
                             {{ __('E-Mail Address') }}:
                         </label>
 
@@ -46,7 +45,7 @@
                     </div>
 
                     <div class="flex flex-wrap">
-                        <label for="password" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="password" class="block text-white text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Password') }}:
                         </label>
 
@@ -62,7 +61,7 @@
                     </div>
 
                     <div class="flex flex-wrap">
-                        <label for="password-confirm" class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">
+                        <label for="password-confirm" class="block text-white text-sm font-bold mb-2 sm:mb-4">
                             {{ __('Confirm Password') }}:
                         </label>
 
@@ -72,13 +71,13 @@
 
                     <div class="flex flex-wrap">
                         <button type="submit"
-                            class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-gray-100 bg-blue-500 hover:bg-blue-700 sm:py-4">
+                            class="w-full select-none font-bold whitespace-no-wrap p-3 rounded-lg text-base leading-normal no-underline text-white bg-red hover:bg-red sm:py-4 p-10">
                             {{ __('Register') }}
                         </button>
 
-                        <p class="w-full text-xs text-center text-gray-700 my-6 sm:text-sm sm:my-8">
-                            {{ __('Already have an account?') }}
-                            <a class="text-blue-500 hover:text-blue-700 no-underline hover:underline" href="{{ route('login') }}">
+                        <p class="w-full text-xs text-center text-white my-6 sm:text-sm sm:my-8  sm:py-4 p-10">
+                            {{ __("Already have an account?") }}
+                            <a class="text-red hover:text-red no-underline hover:underline" href="{{ route('login') }}">
                                 {{ __('Login') }}
                             </a>
                         </p>
@@ -87,6 +86,6 @@
 
             </section>
         </div>
-    </div>
-</main>
+    </main>
+</div>
 @endsection
