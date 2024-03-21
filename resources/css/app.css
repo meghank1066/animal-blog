@@ -48,7 +48,7 @@
 }
 
 .custom-background {
-    background-color: #F6C49C;
+    background-color: #ff9090;
     
   }
 
@@ -394,4 +394,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     /* Additional styling for gallery content */
+}
+
+.app {
+    background-color: #EFB07D;
+}
+
+.bg-light-pink-baby {
+    background-color: #FFD5D4;
 }

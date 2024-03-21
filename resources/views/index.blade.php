@@ -41,7 +41,6 @@
 
 
 
-
 <div class="sm:grid grid-cols-2 gap-8 mx-auto p-6 bg-cool-orange rounded-web">
     <div class="flex justify-center items-center">
         <img src="../../images/bunny.png" alt="bunny" class="mt-4 sm:mt-0 rounded-lg border border-white rounded-image">

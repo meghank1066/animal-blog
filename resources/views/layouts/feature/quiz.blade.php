@@ -1,109 +1,20 @@
-{{-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Pet Matching Form</title>
-</head>
-{{-- <body>
 
-
-// $petSuggestions = [
-//     'Dog' => [
-//         'activity' => 'active',
-//         'allergies' => 'no',
-//         'time' => ['moderate', 'a lot'],
-//         'size' => 'medium',
-//         'special_needs' => 'no',
-//         'activity_level' => 'active',
-//         'space_available' => 'medium_space',
-//         'other_pets' => 'yes',
-//         'image' => 'dog.jpg',
-//     ],
-//     'Cat' => [
-//         'activity' => 'calm',
-//         'allergies' => 'no',
-//         'time' => ['moderate', 'a lot'],
-//         'size' => 'medium',
-//         'special_needs' => 'no',
-//         'activity_level' => 'moderate',
-//         'space_available' => 'medium_space',
-//         'other_pets' => 'yes'
-//     ],
-//     'Rabbit' => [
-//         'activity' => 'calm',
-//         'allergies' => 'no',
-//         'time' => ['moderate', 'a lot'],
-//         'size' => 'small',
-//         'special_needs' => 'no',
-//         'activity_level' => 'sedentary',
-//         'space_available' => 'medium_space',
-//         'other_pets' => 'yes'
-//     ],
-//     'Fish' => [
-//         'activity' => 'calm',
-//         'allergies' => 'yes',
-//         'time' => ['little', 'moderate', 'a lot'],
-//         'size' => 'small',
-//         'special_needs' => 'no',
-//         'activity_level' => 'sedentary',
-//         'space_available' => 'small_space',
-//         'other_pets' => 'no'
-//     ],
-//     'Hamster' => [
-//         'activity' => 'active',
-//         'allergies' => 'no',
-//         'time' => ['little'],
-//         'size' => 'small',
-//         'special_needs' => 'no',
-//         'activity_level' => 'sedentary',
-//         'space_available' => 'small_space',
-//         'other_pets' => 'no'
-//     ]
-// ];
-
-// Get user's preferences from the form
-// $activity = $_POST['activity'] ?? '';
-// $allergies = $_POST['allergies'] ?? '';
-// $time = $_POST['time'] ?? '';
-// $size = $_POST['size'] ?? '';
-// $specialNeeds = $_POST['special_needs'] ?? '';
-// $activityLevel = $_POST['activity_level'] ?? '';
-// $spaceAvailable = $_POST['space_available'] ?? '';
-// $otherPets = $_POST['other_pets'] ?? '';
-
-// // Find pet suggestions based on user's preferences
-// $matchedPets = [];
-// foreach ($petSuggestions as $pet => $characteristics) {
-//     if (
-//         $activity === $characteristics['activity'] &&
-//         $allergies === $characteristics['allergies'] &&
-//         in_array($time, $characteristics['time']) &&
-//         $size === $characteristics['size'] &&
-//         $specialNeeds === $characteristics['special_needs'] &&
-//         $activityLevel === $characteristics['activity_level'] &&
-//         $spaceAvailable === $characteristics['space_available'] &&
-//         $otherPets === $characteristics['other_pets']
-//     ) {
-//         $matchedPets[] = $pet;
-//     }
-// }
-
-// // If no matching pets are found, suggest a random pet
-// if (empty($matchedPets)) {
-//     $matchedPets[] = array_rand($petSuggestions);
-// }
-
-
-?> --}}
 @extends('layouts.app')
 
 @section('content')
-<main class="flex items-center justify-center min-h-screen background-image">
-    <div class="max-w-2xl w-full p-8 rounded-lg shadow-lg quiz-section" style="background-color: #a27754; padding-top: 40px; padding-bottom: 40px; color: black;">
-        <form method="post" action="{{ route('quiz.match') }}" class="quiz-section">
+<div id="app">
+    <main class="flex flex-col items-center justify-center min-h-screen background-image" style="padding-top: 30%; padding-bottom: 30%;">
+
+        <h1 class="text-3xl font-bold text-dark-brown mb-8">Your Perfect Animal Quiz</h1>
+        <img src="./images/kitty.png" style="width: 100px">
+        <div class="max-w-2xl w-full p-8 rounded-lg shadow-lg quiz-section" style="background-color: #a27754; color: black;">
+           <form method="post" action="{{ route('quiz.match') }}" class="quiz-section">
+    
 
             @csrf
             {{-- https://laravel.com/docs/11.x/csrf reference using csrf token for security --}}
             <div class="mb-4">
+                
                 <label class="block text-white mb-2">1. Are you an active or calm person?</label>
                 
                 <label class="radio-label"><input type="radio" name="activity" value="active"> Active</label>
@@ -180,6 +91,9 @@
     }
             </style>
     </div>
+    
 </main>
+</div>
 @endsection
+
     
