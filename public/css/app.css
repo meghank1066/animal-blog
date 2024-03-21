@@ -39405,6 +39405,36 @@ video {
   background-color: #FFD5D4;
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 10s infinite linear;
+}
+
+.animate-slide:hover {
+  animation-play-state: paused;
+}
+
+.bg-pale-orange {
+  background-color: #FEEBC8; /* Adjust the color as needed */
+}
+
+.grid gap-4 {
+  margin: -1rem; /* Remove the gap between the cards */
+}
+
+.grid > div {
+  padding: 1rem; /* Add padding to each card */
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
