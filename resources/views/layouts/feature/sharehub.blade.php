@@ -1,10 +1,8 @@
-
-
 @extends('layouts.app')
 
-@section('content' )
-<div class='custom-img'>
-    <div class="custom-container ">
+@section('content' )  <div class='custom-image'>
+    <div class="custom-container">
+  
         <h2 class="text-2xl font-bold py-10"><img src="{{ asset('images/font.png') }}" style="width: 400px; padding-left: 5%" alt="Font Image"></h2>
         <div class="gallery">
             @foreach ($images as $image)
@@ -75,7 +73,7 @@
         <button type="submit" class="bg-dark-brown hover:bg-ed-brown text-white font-bold py-2 px-4 rounded">Post</button>
     </form>
 </div>
-
+</div>
 
 <script>
     function toggleEdit(id) {
@@ -94,5 +92,4 @@
 }
 
 </script>
-</div>
 @endsection

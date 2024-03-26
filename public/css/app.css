@@ -39062,6 +39062,14 @@ video {
   --color-red: #EF5454;
 }
 
+.custom-image {
+  background-image: url('/images/gallery.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .background-image 
 {
   background-image: url(/images/animalbg.png);
@@ -39355,14 +39363,6 @@ video {
     margin: 0;
   }
 
-.button-container .custom-img {
-    background-image: url(/images/gallery.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* Add any other styling you need */
-  }
-
 .button-container .gallery-modal {
     display: none;
     position: fixed;
@@ -39390,27 +39390,26 @@ video {
     background-color: #FFD5D4;
   }
 
-@keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-.button-container .animate-slide {
+/* .animate-slide {
     animation: slide 10s infinite linear;
-  }
+}
 
-.button-container .animate-slide:hover {
+.animate-slide:hover {
     animation-play-state: paused;
-  }
+} */
 
 .button-container .bg-pale-orange {
     background-color: #FEEBC8;
   }
+
+/* @keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+} */
 
 .button-container .grid gap-4 {
     margin: -1rem;
@@ -192199,6 +192198,4 @@ video {
     animation: bounce 1s infinite;
   }
 }
-
-
 

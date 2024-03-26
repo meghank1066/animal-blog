@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Billo';
-    src: url('../../public/css/billo.regular.ttf') format('woff');
+    src: url('../../public/fonts/billo.regular.ttf') format('woff');
     font-weight: normal;
     font-style: normal;
   }
@@ -24,7 +24,14 @@
   --color-red: #EF5454;
 }
   
-  
+.custom-image {
+    background-image: url('/images/gallery.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
 
 .background-image 
@@ -214,21 +221,18 @@
 
 
 
-
 @media (max-width: 540px) {
     .navbarlist { 
-    
         a {
-        font-size: 0.8em; 
+            font-size: 0.8em; 
+        }
+        .username  {
+            font-size: 0.8em; 
+        }
+        .username:hover  {
+            font-size: 0.8em; 
+        }
     }
-
-    .username  {
-        font-size: 0.8em; 
-    }
-    .username:hover  {
-        font-size: 0.8em; 
-    }
-}
 
     .navapp img {
         width: 80px;
@@ -242,6 +246,7 @@
         width: 95%; 
     }
 }
+
 
 
 .custom-container {
@@ -346,13 +351,8 @@
     margin: 0;
 }
 
-/* 
-.custom-image {
-    background-image: url('/images/gallery.png'); 
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-} */
+
+
 
 .gallery-modal {
     display: none;
@@ -411,9 +411,3 @@
     padding: 1rem; 
 }
 }
-
-
-/* @media (max-width: 1024px) {
-    .background-image {
-
-
